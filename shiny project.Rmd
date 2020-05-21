@@ -3,6 +3,7 @@ title: "shiny project"
 author: "Nozhat Ghazi"
 date: "25-12-2018"
 output:
+  beamer_presentation: default
   ioslides_presentation: default
   slidy_presentation: default
 ---
@@ -11,21 +12,11 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-## About the Course Project
-
-This is a deliverable for the course Developing Data Products as part of the Coursera Data Science Specialization.
-
-Instructions:
-
-1. Write a shiny application with associated supporting documentation. The documentation should be thought of as whatever a user will need to get started using your application.
-2. Deploy the application on Rstudio's shiny server
-3. Share the application link by pasting it into the provided text box
-4. Share your server.R and ui.R code on github
 
 
 ## How to use the application
 
-Using the data provided by ChickWeight dataset, we fit a linear model to predict a chicken's weight based on the time and diet.
+Using the data provided by ChickWeight dataset,a linear model fitted to predict a chicken's weight based on the time and diet.
 
 The application is running on (https://vardnoosh.shinyapps.io/shiny/)
 
@@ -35,7 +26,7 @@ ui.R, and Server.R Code in my github repository (https://github.com/vardnoosh/Sh
 
 The data used in the app comes from the ChickWeight dataset. 
 
-```{r summary}
+```{r summary, echo=FALSE}
 data("ChickWeight")
 dt <- ChickWeight[ChickWeight$Diet == c("1","2"),]
 summary(dt)
@@ -43,7 +34,7 @@ summary(dt)
 
 ## Plot
 In the scatterplot below are represented the data used for the prediction model
-```{r plot}
+```{r plot , echo=FALSE}
 
 data("ChickWeight")
 plot(jitter(dt$weight) ~ dt$Time,xlab="Time",ylab="Weight of the Chicken(gm)",main="Scatterplot of ChickWeight Data",pch=19,frame.plot=FALSE,col=ifelse(dt$Diet=="1","2", "pink"))
