@@ -1,3 +1,3 @@
-# Shiny-Application-and-Reproducible-Pitch
+# Application-for-Chicken-weight-predition
 
-Using the data provided by ChickWeight dataset, a linear model fitted to predict a chicken’s weight based on the time and diet.
+Using the data provided by ChickWeight dataset, a chicken’s weight is predicted based on the time and diet.
